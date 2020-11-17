@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey form</title>
+    <link rel="stylesheet" href="static/css/main.css" />
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</head>
+<body>
+    <header>
+        <h1 id="title" title="Survey title">Take our Developer Survey</h1>
+        <p id="description">A developer survey</p>
+    </header>
+    <main>
+        <div class="container">
+            <form id="survey-form" method="POST" action="/">
+                <label id="name-label" for="name">Name</label>
+                <input type="text" id="name" placeholder="Please enter your name" required>
+                <br>
+                <label id="email-label" for="email">Email</label>
+                <input type="email" id="email" placeholder="Please enter a valid email address" required>
+                <br>
+                <label id="number-label" for="number">Age</label>
+                <input type="number" min="10" max="125" id="number" placeholder="Please enter your age">
+                <br>
+                <label for="job">Role</label>
+                <select name="job" id ='dropdown'>
+                    <option disabled>Select role</option>
+                    <option value="student">Student</option>
+                    <option value="developer">Full time Developer</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="nosay">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+                <br>
+
+                <p>Would you recommend our services?</p>
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />Definitely</label>
+                <label>
+                    <input name="user-recommend" value="maybe" type="radio" class="input-radio" />Maybe</label>
+                
+                <label><input name="user-recommend" value="not-sure" type="radio" class="input-radio" />Not sure</label>
+
+                <p>What needs improvements in out survey?</p>
+                <label>
+                    <input type="checkbox" name="prefer" id="questions" value="questions" />
+                    More Questions
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" id="design" value="design" />
+                    Better design
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" id="usrfrnd" value="userfriendly" />
+                    Better user-friendliness
+                </label>
+                <label>
+                    <input type="checkbox" name="prefer" id="nothing" value="nothing" checked/>
+                    Nothing
+                </label>
+                <br>
+
+                <div>
+                    <label for="txta">Final thoughts</label>
+                    <textarea name="textarea" id="txta" cols="30" rows="10"></textarea>
+                </div>
+
+                <input type="submit" id="submit"/>
+
+            </form>
+
+        </div>        
+
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
